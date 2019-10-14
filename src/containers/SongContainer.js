@@ -9,6 +9,8 @@ class SongContainer extends React.Component {
       songs: [],
       selectedSong: null
     };
+
+  this.handleSongSelected = this.handleSongSelected.bind(this);
   }
 
   componentDidMount() {
@@ -22,13 +24,13 @@ class SongContainer extends React.Component {
 
   handleSongSelected(index){
     const selectedSong = this.state.songs[index];
-    this.setState({selectedSong: selectedSong})
+    this.setState({selectedSong: selectedSong});
   }
 
   render() {
     return(
       <div>
-      <h2>Song Container</h2>
+      <h2>Top 20:</h2>
       <SongSelector songs={this.state.songs} onSongSelected={this.handleSongSelected} />
       <SongDetail song={this.state.selectedSong} />
 
