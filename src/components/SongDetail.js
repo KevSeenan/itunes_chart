@@ -6,10 +6,11 @@ const SongDetail = (props) => {
       <p>No Song Selected</p>
     )
   }
-
-  return(
+  return (
     <div>
-    <p>will change when song is selected</p>
+    <h4>Song: {props.song['im:name'].label}</h4>
+    <h4>Artist: {props.song['im:artist'].label}</h4>
+    <h4>Price: {props.song['im:price'].label}</h4>
     </div>
   )
 }
